@@ -1,0 +1,17 @@
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\BackendApplication.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\config\ServletConfig.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\controller\CarController.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\dto\CarRequest.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\dto\CarResponse.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\dto\FuelEntryRequest.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\dto\FuelEntryResponse.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\dto\FuelStatsResponse.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\exception\BadRequestException.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\exception\ResourceNotFoundException.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\handler\RestExceptionHandler.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\model\Car.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\model\FuelEntry.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\repository\CarRepository.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\repository\FuelEntryRepository.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\service\CarService.java
+C:\dev\codehills\Fuel-Tracker\backend\src\main\java\com\codehills\fueltracker\servlet\FuelStatsServlet.java
