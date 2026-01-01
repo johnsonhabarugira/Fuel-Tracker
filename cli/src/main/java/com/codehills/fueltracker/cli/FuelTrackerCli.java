@@ -47,6 +47,7 @@ public class FuelTrackerCli {
                 case "create-car" -> handleCreateCar(baseUrl, options);
                 case "add-fuel" -> handleAddFuel(baseUrl, options);
                 case "fuel-stats" -> handleFuelStats(baseUrl, options);
+                case "list-cars" -> handleListCars(baseUrl);
                 default -> {
                     System.err.println("Unknown command: " + command);
                     printUsage();
@@ -142,6 +143,25 @@ public class FuelTrackerCli {
             System.out.printf("Total fuel: %.1f L%n", stats.totalFuelLiters());
             System.out.printf("Total cost: %.2f%n", stats.totalCost());
             System.out.printf("Average consumption: %.1f L/100km%n", stats.averageConsumptionPer100Km());
+        });
+    }
+
+    private void handleListCars(String baseUrl) {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(baseUrl + "/api/cars"))
+                .GET()
+                .build();
+
+        sendAndPrint(request, response -> {
+            CarResponse[] cars = readJson(response.body(), CarResponse[].class);
+            if (cars.length == 0) {
+                System.out.println("No cars found.");
+                return;
+            }
+            System.out.println("Cars:");
+            for (CarResponse car : cars) {
+                System.out.printf("- #%d: %s %s (%d)%n", car.id(), car.brand(), car.model(), car.year());
+            }
         });
     }
 
@@ -245,6 +265,7 @@ public class FuelTrackerCli {
 
                 Commands:
                   create-car --brand <brand> --model <model> --year <year> [--baseUrl <url>]
+                  list-cars [--baseUrl <url>]
                   add-fuel --carId <id> --liters <liters> --price <price> --odometer <odometer> [--baseUrl <url>]
                   fuel-stats --carId <id> [--baseUrl <url>]
 

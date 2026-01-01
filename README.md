@@ -67,6 +67,7 @@ java -jar cli/target/fuel-tracker-cli-1.0.0-jar-with-dependencies.jar <command> 
 ```
 Commands:
 - `create-car --brand Toyota --model Corolla --year 2018`
+- `list-cars`
 - `add-fuel --carId 1 --liters 40 --price 52.5 --odometer 45000`
 - `fuel-stats --carId 1`
 
