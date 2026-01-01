@@ -2,12 +2,12 @@
 
 Fuel Tracker is a two-module Java project:
 - **Backend**: Spring Boot REST API with an integrated manual servlet, entirely in-memory (no DB/auth).
-- **CLI**: Standalone Java command-line client that calls the API over HTTP using java.net.http.HttpClient.
+- **CLI**: Standalone Java command-line client that calls the API over HTTP using `java.net.http.HttpClient`.
 
 ## Project layout
-- `backend/` – Spring Boot app (controllers  service  repositories, servlet registration)
-- `cli/` – CLI tool with fat-jar packaging
-- `pom.xml` – parent Maven build
+- `backend/` - Spring Boot app (controllers -> service -> repositories, servlet registration)
+- `cli/` - CLI tool with fat-jar packaging
+- `pom.xml` - parent Maven build
 
 ## Requirements
 - Java 17+
@@ -29,12 +29,12 @@ Default port is `8080`. To change: `-Dspring-boot.run.arguments=--server.port=80
 If the port is busy, stop the other process (e.g., `netstat -ano | findstr :8080` then `taskkill /PID <pid> /F`) or use another port as above.
 
 ## API (REST)
-- **Create car**: `POST /api/cars`  
-  Body: `{"brand":"Toyota","model":"Corolla","year":2018}`  `201 Created` with created car.
-- **List cars**: `GET /api/cars`  array of cars.
-- **Add fuel entry**: `POST /api/cars/{id}/fuel`  
-  Body: `{"liters":40,"price":52.5,"odometer":45000}`  `201 Created` with entry.
-- **Fuel stats**: `GET /api/cars/{id}/fuel/stats`  
+- **Create car**: `POST /api/cars`
+  Body: `{"brand":"Toyota","model":"Corolla","year":2018}` -> `201 Created` with created car.
+- **List cars**: `GET /api/cars` -> array of cars.
+- **Add fuel entry**: `POST /api/cars/{id}/fuel`
+  Body: `{"liters":40,"price":52.5,"odometer":45000}` -> `201 Created` with entry.
+- **Fuel stats**: `GET /api/cars/{id}/fuel/stats`
   Returns `{ "totalFuelLiters": ..., "totalCost": ..., "averageConsumptionPer100Km": ... }`.
 
 Validation errors return `400 Bad Request`; unknown car IDs return `404 Not Found`.
@@ -56,7 +56,7 @@ IDs are generated with an `AtomicLong`.
 - `totalFuelLiters`: sum of liters for the car
 - `totalCost`: sum of price for the car
 - `averageConsumptionPer100Km`:
-  - if fewer than 2 entries or distance <= 0  `0`
+  - if fewer than 2 entries or distance <= 0 -> `0`
   - `distanceKm = maxOdometer - minOdometer`
   - `avg = (totalFuelLiters / distanceKm) * 100`
 

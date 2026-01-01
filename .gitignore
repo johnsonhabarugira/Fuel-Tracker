@@ -1,0 +1,27 @@
+# Maven build outputs
+/target/
+/*/target/
+/**/target/
+/**/.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs and temp
+*.log
+*.tmp
+*.swp
+*.swo
+
+# IDE/editor
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.class
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Assembled/fat jars
+**/*-jar-with-dependencies.jar
