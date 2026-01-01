@@ -1,0 +1,5 @@
+com\codehills\fueltracker\cli\FuelTrackerCli$ResponseHandler.class
+com\codehills\fueltracker\cli\FuelTrackerCli.class
+com\codehills\fueltracker\cli\FuelTrackerCli$FuelStatsResponse.class
+com\codehills\fueltracker\cli\FuelTrackerCli$CarResponse.class
+com\codehills\fueltracker\cli\FuelTrackerCli$FuelEntryResponse.class
